@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7d5ba;
+            color: #333;
+        }
+
+        .container {
+            width: 60%;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #e68a49;
+            margin-bottom: 10px;
+        }
+ nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .breadcrumbs {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Payment Box */
+        .payment-box {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .payment-method label {
+            margin-left: 10px;
+        }
+
+        input[type=radio] {
+            margin-right: 5px;
+        }
+
+        .payment-details table {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .payment-details td {
+            padding: 5px 0;
+        }
+
+        .total {
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #e68a49;
+            text-align: right;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #e68a49;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #d17a40;
+        }
+
+        footer {
+            background-color: #e68a49;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #6c63ff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container -->
+    <div class="container">
+        <h1>Checkout</h1>
+<nav>
+            <a href="web.html">Home</a>
+
+        </nav>
+
+        <!-- Payment Box -->
+        <div class="payment-box">
+            <!-- Payment Method -->
+            <div class="payment-method">
+                <h2>Payment Method</h2>
+                <input type="radio" id="cod" name="payment" value="cod">
+                <label for="cod">Cash on Delivery</label><br>
+                <input type="radio" id="tng" name="payment" value="tng">
+                <label for="tng">Touch N Go</label><br>
+                <input type="radio" id="maybank" name="payment" value="maybank">
+                <label for="maybank">Maybank2u</label><br>
+                <input type="radio" id="visa" name="payment" value="visa">
+                <label for="visa">Visa</label><br>
+
+            </div>
+
+ 
+
+            <!-- Payment Details -->
+            <div class="payment-details">
+                <h2>Payment Details</h2>
+                <table>
+                <tr>
+                 <td><b>English K2</b><td>
+                 </tr>
+                
+
+                    <tr>
+                        <td>Merchandise Subtotal:</td>
+                        <td style="text-align: right;">RM 10.90</td>
+                    </tr>
+                    <tr>
+                        <td>Delivery Fee:</td>
+                        <td style="text-align: right;">RM 0.50</td>
+                    </tr>
+                </table>
+                            </div>
+
+            <!-- Total -->
+            <div class="total">
+                Total: RM 11.40
+            </div>
+
+            <!-- Confirm Button -->
+            <div style="text-align: right; margin-top: 20px;">
+                <button onclick="confirmOrder()">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Written World | <a href="web.html">Home</a></p>
+    </footer>
+
+    <script>
+          function confirmOrder() {
+    // Check if any radio button is selected
+    const paymentMethods = document.getElementsByName('payment');
+    let isSelected = false;
+
+    for (let i = 0; i < paymentMethods.length; i++) {
+        if (paymentMethods[i].checked) {
+            isSelected = true;
+            break;
+        }
+    }
+
+    // If no radio button is selected, show an error
+    if (!isSelected) {
+        alert('Please select a payment method before proceeding.');
+        return;
+    }
+
+    // Confirm the order and redirect to the home page
+    if (confirm('Order Confirmed! Thank you for your purchase.')) {
+        window.location.href = 'web.html';
+    }
+}
+     </script>
+</body>
+</html>

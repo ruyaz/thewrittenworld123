@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Written World - Bookstore</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f7d5ba;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            color: #6c63ff;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #e68a49;
+        }
+
+        .logo h1 {
+            font-size: 60px;
+            margin: 0;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            font-size: inherit;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f7d5ba;
+        }
+        
+
+
+        .icons img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #85420b;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #4b4a67;
+        }
+
+        /* Slideshow Section */
+        /* Slideshow Container */
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    /* Slides */
+    .slideshow-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out; /* Smooth transition for fade effect */
+    }
+
+    .slideshow-container img.active {
+        opacity: 1; /* Show the active slide */
+    }
+        /* Footer Section */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 30px;
+            background-color: #e68a49;
+        }
+
+        footer div {
+            flex: 1;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin: 5px 0;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+         <div class="search-bar">
+            <form id="search-form" action="#" method="GET" onsubmit="handleSearch(event)">
+                <input type="text" id="search-input" placeholder="Search..." name="query" required />
+                <button type="submit">Search</button>
+            </form>
+        </div>
+         <script>
+        // JavaScript function to handle the search
+        function handleSearch(event) {
+            event.preventDefault(); // Prevents the default form submission
+
+            const searchQuery = document.getElementById('search-input').value;
+            if (searchQuery) {
+                // You can either navigate to a search results page, or dynamically filter results
+                alert("Searching for: " + searchQuery); // You can replace this with a real search handling
+                // Example: Redirect to a search results page with query parameter
+                // window.location.href = "search-results.html?query=" + encodeURIComponent(searchQuery);
+            } else {
+                alert("Please enter a search term.");
+            }
+        }
+    </script>
+
+        <div class="logo">
+            <h1>The Written World<img alt="" height="200" src="../../../Downloads/book1-removebg-preview%20(1).png" width="200"></h1>
+        </div>
+        <div class="icons">
+            <a href="notifications.html"><img src="bell-removebg-preview.png" alt="Notifications" style="width: 30px; height: 30px" /></a>
+            <a href="shopping_cart.html"><img src="cart-removebg-preview.png" alt="Cart" style="width: 30px; height: 28px" /></a>
+            <a href="profile.html"><img src="user-removebg-preview.png" alt="Profile" style="width: 30px; height: 30px;" /></a>
+
+        </div>
+    </header>
+    <nav style="width: 1194px; font-size: large; text-align:inherit; position: inherit; left: auto; text-transform: uppercase; font-style: normal; text-indent: inherit;">
+            <span lang="en-my">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</span>
+			<a href="web.html">Home</a>
+            <span lang="en-my">&nbsp; </span>
+            <a href="about.html">About Us</a>
+            <span lang="en-my">&nbsp; </span>
+            <a href="stationary.html">Stationary</a>
+            <span lang="en-my">&nbsp; </span>
+            <a href="books.html">Books</a>
+            <span lang="en-my">&nbsp; </span>
+            <a href="event.html">Event</a>
+            <span lang="en-my">&nbsp; </span>
+            <a href="customer-service.html">Customer Service</a>
+        </nav>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container" style="left: 0px; top: 29px; height: 477px;">
+    <img src="Slide%201.png" alt="Slide 1" class="slide active" height="396" width="1584">&nbsp;
+     <img src="TWWSLIDE2.png" alt="Slide 2" style="left: 0; top: 0;" height="441" width="1166">
+    <img src="Slide%203.png" alt="Slide 3" style="left: 0; top: 0;" height="441" width="1166">
+   </div>
+   <script>
+    // JavaScript for Slideshow
+    const slides = document.querySelectorAll('.slideshow-container img');
+    let currentSlide = 0;
+
+    function showNextSlide() {
+        slides[currentSlide].classList.remove('active'); // Hide the current slide
+        currentSlide = (currentSlide + 1) % slides.length; // Move to the next slide
+        slides[currentSlide].classList.add('active'); // Show the next slide
+    }
+
+    // Change slide every 3 seconds
+    setInterval(showNextSlide, 3000);
+</script>
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h3>Information</h3>
+            <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="return.html">Return & Refund Policy</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Extras</h3>
+            <ul>
+                <li><a href="voucher.html">Vouchers</a></li>
+                <li><a href="promotions.html">Promotions</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Customer Service</h3>
+            <ul>
+                <li><a href="customer-service.html">Contact Us</a><span lang="en-my">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://www.instagram.com/the_written_world_bookstore/profilecard/?igsh=NzJ6bTc4aGpmcW83" target="_blank">
+				<img src="ig-removebg-preview.png" alt="Instagram" height="292" style="width: 24px; height: 24px" width="216"></span>
+				<a href="https://www.tiktok.com/@the_written_world?_t=ZS-8sBQ1eueDMA&_r=1" target="_blank">
+				<img alt="" height="29" src="tiktok-removebg-preview.png" width="29"></li>
+                <li><a href="sitemap.html">Site Map</a></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            &nbsp;&nbsp;
+        </div>
+    </footer>
+</body>
+</html>

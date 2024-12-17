@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voucher - The Written World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7d5ba;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        header nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+        }
+
+        h1 {
+            color: #343a40;
+        }
+
+        .voucher-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .voucher-item {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .voucher-item:last-child {
+            border-bottom: none;
+        }
+
+        .voucher-item h3 {
+            margin: 0;
+            color: #e68a49;
+        }
+
+        .voucher-item p {
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .voucher-code {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .voucher-apply {
+            margin-top: 15px;
+        }
+
+        .voucher-apply input {
+            padding: 10px;
+            font-size: 16px;
+            width: 70%;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .voucher-apply button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .voucher-apply button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="web.html">Home</a>
+            <a href="shopping_cart.html">View Cart</a>
+        </nav>
+    </header>
+
+    <h1>Voucher Codes</h1>
+
+    <div class="voucher-container">
+        <div class="voucher-item">
+            <h3>Summer Sale - 15% Off</h3>
+            <p>Use the voucher code below to get 15% off your next purchase!</p>
+            <p class="voucher-code">SUMMER15</p>
+        </div>
+
+        <div class="voucher-item">
+            <h3>Free Shipping</h3>
+            <p>Enjoy free shipping on all orders above $50 with the voucher code below!</p>
+            <p class="voucher-code">FREESHIP</p>
+        </div>
+
+        <div class="voucher-item">
+            <h3>Buy 2 Get 1 Free</h3>
+            <p>Get a free book of your choice when you purchase two books from our store!</p>
+            <p class="voucher-code">BUY2GET1</p>
+        </div>
+
+        <div class="voucher-apply">
+            <h3>Apply Your Voucher Code</h3>
+            <p>Enter your voucher code below and click "Apply" to receive your discount.</p>
+            <input type="text" id="voucherInput" placeholder="Enter Voucher Code">
+            <button id="applyVoucher">Apply</button>
+            <p id="voucherMessage" style="color: #28a745; font-weight: bold; margin-top: 10px;"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 The Written World</p>
+    </footer>
+
+    <script>
+        document.getElementById('applyVoucher').addEventListener('click', function() {
+            const voucherInput = document.getElementById('voucherInput').value.toUpperCase();
+            const messageElement = document.getElementById('voucherMessage');
+
+            // List of valid voucher codes
+            const validVouchers = ['SUMMER15', 'FREESHIP', 'BUY2GET1'];
+
+            if (validVouchers.includes(voucherInput)) {
+                messageElement.textContent = 'Voucher applied successfully!';
+                messageElement.style.color = 'green';
+            } else {
+                messageElement.textContent = 'Invalid voucher code. Please try again.';
+                messageElement.style.color = 'red';
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stationary Items</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7d5ba;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #e68a49;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+ header nav a {
+            margin-right: 20px;
+            text-align:center;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Container for Items */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px;
+        }
+
+        /* Item Styles */
+        .item {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .item:hover{
+			transform: scale(1.05);
+}
+
+        .item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .item p {
+            margin: 5px 0;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #e68a49;
+        }
+
+        .item button {
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .item button:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #e68a49;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #6c63ff;
+        }
+    </style>
+    <script>
+
+        function addToCart(name, price, image) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, image });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} has been added to your cart!`);
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Stationary</h1>
+        <nav>
+            <a href="web.html">Home</a>
+            <a href="shopping_cart.html">Cart</a>
+
+        </nav>
+
+    </header>
+
+    <!-- Stationary Items Container -->
+    <div class="container">
+        <div class="item">
+        <a href="details/iq_k1.html">
+            <img src="calculator.jpg" alt="Casio Scientific Calculator">
+            <p>Casio Scientific Calculator</p>
+            <p class="price">RM 15.00</p></a>
+            <button onclick="addToCart('Casio Scientific Calculator', 15.00, 'calculator.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+        <a href="details/iq_k1.html">
+            <img src="exam_grade.jpg" alt="Stablo Exam Grade">
+            <p>Stablo Exam Grade</p>
+            <p class="price">RM 12.40</p></a>
+            <button onclick="addToCart('Stablo Exam Grade', 12.40, 'exam_grade.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+        <a href="alattulis2_selection.html">
+            <img src="pencil_bag.jpg" alt="Pencil Bag">
+            <p>Pencil Bag</p>
+            <p class="price">RM 10.00</p></a>
+            <button onclick="addToCart('Pencil Bag', 10.00, 'pencil_bag.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+        <a href="details/iq_k1.html">
+            <img src="cutter.jpg" alt="Cutter Knife">
+            <p>Cutter Knife</p>
+            <p class="price">RM 0.50</p></a>
+            <button onclick="addToCart('Cutter Knife', 0.50, 'cutter.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+        <a href="details/iq_k1.html">
+            <img src="notebook.jpg" alt="Notebook">
+            <p>Notebook</p>
+            <p class="price">RM 2.00</p></a>
+            <button onclick="addToCart('Notebook', 2.00, 'notebook.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+        <a href="details/iq_k1.html">
+            <img src="ruler.jpg" alt="Ruler">
+            <p>Ruler</p>
+            <p class="price">RM 0.20</p></a>
+            <button onclick="addToCart('Ruler', 0.20, 'ruler.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+        <a href="details/iq_k1.html">
+            <img src="pen.jpg" alt="Pen">
+            <p>Pen</p>
+            <p class="price">RM 1.00</p></a>
+            <button onclick="addToCart('Pen', 1.00, 'pen.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+        <a href="details/iq_k1.html">
+            <img src="sharpener.jpg" alt="Sharpener">
+            <p>Sharpener</p>
+            <p class="price">RM 0.10</p></a>
+            <button onclick="addToCart('Sharpener', 0.10, 'sharpener.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+        <a href="details/iq_k1.html">
+            <img src="foolscap_paper.jpg" alt="Foolscap Paper">
+            <p>Foolscap Paper</p>
+            <p class="price">RM 8.00</p></a>
+            <button onclick="addToCart('Foolscap Paper', 8.00, 'foolscap_paper.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+        <a href="details/iq_k1.html">
+            <img src="exercise_book.jpg" alt="Exercise Book">
+            <p>Exercise Book</p>
+            <p class="price">RM 5.00</p></a>
+            <button onclick="addToCart('Exercise Book', 5.00, 'exercise_book.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+        <a href="alattulis1_selection.html">
+            <img src="poster_color.jpg" alt="Poster Color">
+            <p>Buncho Poster Color</p>
+            <p class="price">RM 15.25</p></a>
+            <button onclick="addToCart('Buncho Poster Color', 15.25, 'poster_color.jpg')">Add to Cart</button>
+
+        </div>
+        <div class="item">
+        <a href="details/iq_k1.html">
+            <img src="nylon_brush.jpg" alt="Nylon Brush">
+            <p>Niki Nylon Brush</p>
+            <p class="price">RM 2.50</p></a>
+            <button onclick="addToCart('Niki Nylon Brush', 2.50, 'nylon_brush.jpg')">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Written World | <a href="web.html">Home</a></p>
+    </footer>
+</body>
+</html>

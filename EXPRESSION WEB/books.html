@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7d5ba;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #e68a49;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+  header nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Container for Items */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px;
+        }
+
+        /* Item Styles */
+        .item {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+        .item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .item p {
+            margin: 5px 0;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #e68a49;
+        }
+         .item button {
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .item button:hover {
+            background-color: #45a049;
+        }
+
+
+        /* Footer Styles */
+        footer {
+            background-color: #e68a49;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #6c63ff;
+        }
+    </style>
+    <script>
+        function addToCart(name, price, image) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price, image });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} has been added to your cart!`);
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Books</h1>
+        <nav>
+            <a href="web.html">Home</a>
+            <a href="shopping_cart.html">Cart</a>
+        </nav>
+
+    </header>
+    
+
+    <!-- Books Items Container -->
+    <div class="container">
+        <div class="item">
+             <a href="book_selection.html">                <img src="english_k2.jpg" alt="English K2">
+                <p>English K2</p>
+                <p class="price">RM 10.90</p>
+                <a href="book_selection.html">
+
+            </a>
+            <button onclick="addToCart('English K2', 10.90, 'english_k2.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <a href="details/key_words_k2.html">
+                <img src="key_words_k2.jpg" alt="Key Words K2">
+                <p>Key Words K2</p>
+                <p class="price">RM 7.50</p>
+            </a>
+            <button onclick="addToCart('Key Words K2', 7.50, 'key_words_k2.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <a href="details/iq_k1.html">
+                <img src="iq_k1.jpg" alt="Intelligent Quotient K1">
+                <p>Intelligent Quotient K1</p>
+                <p class="price">RM 6.50</p>
+            </a>
+            <button onclick="addToCart('Intelligent Quotient K1', 6.50, 'iq_k1.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <a href="details/bahasa_melayu_t1.html">
+                <img src="bahasa_melayu_t1.jpg" alt="Bahasa Melayu T1">
+                <p>Bahasa Melayu T1</p>
+                <p class="price">RM 9.80</p>
+            </a>
+            <button onclick="addToCart('Bahasa Melayu T1', 9.80, 'bahasa_melayu_t1.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <a href="details/english_t2.html">
+                <img src="english_t2.jpg" alt="English T2">
+                <p>English T2</p>
+                <p class="price">RM 14.50</p>
+            </a>
+            <button onclick="addToCart('English T2', 14.50, 'english_t2.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <a href="details/sejarah_t3.html">
+                <img src="sejarah_t3.jpg" alt="Sejarah T3">
+                <p>Sejarah T3</p>
+                <p class="price">RM 9.25</p>
+            </a>
+            <button onclick="addToCart('Sejarah T3', 9.25, 'sejarah_t3.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <a href="details/pendidikan_moral_t3.html">
+                <img src="pendidikan_moral_t3.jpg" alt="Pendidikan Moral T3">
+                <p>Pendidikan Moral T3</p>
+                <p class="price">RM 8.80</p>
+            </a>
+            <button onclick="addToCart('Pendidikan Moral T3', 8.80, 'pendidikan_moral_t3.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <a href="details/physics_t4.html">
+                <img src="physics_t4.jpg" alt="Physics T4">
+                <p>Physics T4</p>
+                <p class="price">RM 10.90</p>
+            </a>
+            <button onclick="addToCart('Physics T4', 10.90, 'physics_t4.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <a href="details/human_computer.html">
+                <img src="human_computer.jpg" alt="Human Computer">
+                <p>Human Computer</p>
+                <p class="price">RM 35.80</p>
+            </a>
+            <button onclick="addToCart('Human Computer', 35.80, 'human_computer.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <a href="details/jungle_king.html">
+                <img src="jungle_king.jpg" alt="Jungle King">
+                <p>Jungle King</p>
+                <p class="price">RM 20.00</p>
+            </a>
+            <button onclick="addToCart('Jungle King', 20.00, 'jungle_king.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <a href="details/mathematics_t4.html">
+                <img src="mathematics_t4.jpg" alt="Mathematics T4">
+                <p>Mathematics T4</p>
+                <p class="price">RM 10.20</p>
+            </a>
+            <button onclick="addToCart('Mathematics T4', 10.20, 'mathematics_t4.jpg')">Add to Cart</button>
+        </div>
+        <div class="item">
+            <a href="details/brain_rules.html">
+                <img src="brain_rules.jpg" alt="Brain Rules">
+                <p>Brain Rules</p>
+                <p class="price">RM 25.90</p>
+            </a>
+            <button onclick="addToCart('Brain Rules', 25.90, 'brain_rules.jpg')">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Written World | <a href="web.html">Home</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - The Written World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7d5ba;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        header nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+        }
+
+        h1 {
+            color: #343a40;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item h3 {
+            margin: 0;
+            color: #e68a49;
+            cursor: pointer;
+        }
+
+        .faq-item p {
+            margin: 5px 0;
+            color: #555;
+            display: none;
+        }
+
+        .faq-item.active p {
+            display: block;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="web.html">Home</a>
+        </nav>
+    </header>
+
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <h3>What payment methods do you accept?</h3>
+            <p>We accept all major credit and debit cards, as well as PayPal and bank transfers.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How can I track my order?</h3>
+            <p>Once your order has been shipped, you will receive an email with the tracking number and a link to track your shipment.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do you offer international shipping?</h3>
+            <p>Yes, we offer international shipping. Please check our shipping page for details on countries we ship to and shipping fees.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I cancel my order?</h3>
+            <p>You can cancel your order within 24 hours of placing it. Please contact us immediately for assistance.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do you offer gift cards?</h3>
+            <p>Yes, we offer gift cards of varying denominations. You can purchase them through our website or in-store.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>What is your return policy?</h3>
+            <p>We accept returns within 30 days of purchase. The item must be in original condition, and you must provide proof of purchase. Please visit our returns page for more details.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I contact customer support?</h3>
+            <p>You can contact us via email at <a href="mailto:support@thewrittenworld.my">support@thewrittenworld.my</a> or call us at +60143865039.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 The Written World</p>
+    </footer>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item h3');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const faqItem = item.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

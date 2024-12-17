@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Written World - Bookstore</title>
+    <style>
+        /* Your styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f7d5ba;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            color: #6c63ff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #e68a49;
+        }
+
+        .logo h1 {
+            font-size: 60px;
+            margin: 0;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            font-size: inherit;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f7d5ba;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #85420b;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #4b4a67;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="search-bar">
+            <form id="search-form" action="#" method="GET" onsubmit="handleSearch(event)">
+                <input type="text" id="search-input" placeholder="Search..." name="query" required />
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="logo">
+            <h1>The Written World</h1>
+        </div>
+    </header>
+    
+    <!-- Content of the page goes here -->
+
+    <script>
+        // JavaScript function to handle the search
+        function handleSearch(event) {
+            event.preventDefault(); // Prevents the default form submission
+
+            const searchQuery = document.getElementById('search-input').value;
+            if (searchQuery) {
+                // You can either navigate to a search results page, or dynamically filter results
+                alert("Searching for: " + searchQuery); // You can replace this with a real search handling
+                // Example: Redirect to a search results page with query parameter
+                // window.location.href = "search-results.html?query=" + encodeURIComponent(searchQuery);
+            } else {
+                alert("Please enter a search term.");
+            }
+        }
+    </script>
+</body>
+</html>

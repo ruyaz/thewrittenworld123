@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7d5ba;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #e68a49;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+       header nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+        }
+
+
+        /* Container for Items */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px;
+        }
+
+        /* Item Styles */
+        .item {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .item:hover{
+	transform: scale(1.05);
+	
+}
+
+        .item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .item p {
+            margin: 5px 0;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #e68a49;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #e68a49;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #6c63ff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Event</h1>
+        <nav>
+            <a href="web.html">Home</a>
+        </nav>
+
+    </header>
+
+    <!-- Event Items Container -->
+    <div class="container">
+        <div class="item">
+            <img src="lantern_decoration.jpg" alt="Lantern Decoration">
+            <p>Lantern Decoration Online Contest</p>
+            <p class="price">RM 25.00</p>
+        </div>
+        <div class="item">
+            <img src="colouring_contest.jpg" alt="Colouring Contest"style="width: 180px; height: 100px">
+            <p>Colouring Contest</p>
+            <p class="price">RM 20.00</p>
+        </div>
+        <div class="item">
+            <img src="art_craft.jpg" alt="Art & Craft Workshop">
+            <p>Art & Craft Workshop</p>
+            <p class="price">RM 10.00</p>
+        </div>
+        <div class="item">
+            <img src="sudoku.jpg" alt="Sudoku Competition" style="width: 180px; height: 100px">
+            <p>Sudoku Competition</p>
+            <p class="price">RM 9.00</p>
+        </div>
+        <div class="item">
+            <img src="debate.jpg" alt="Debate">
+            <p>Debate</p>
+            <p class="price">RM 19.50</p>
+        </div>
+        <div class="item">
+            <img src="public-speaking.jpg" alt="Public Speaking">
+            <p>Public Speaking</p>
+            <p class="price">RM 15.00</p>
+        </div>
+        <div class="item">
+            <img src="dance_workshop.jpg" alt="Dance Workshop">
+            <p>Dance Workshop</p>
+            <p class="price">RM 13.50</p>
+        </div>
+        <div class="item">
+            <img src="children_day.jpg" alt="Children's Day">
+            <p>Children's Day</p>
+            <p class="price">RM 5.00</p>
+        </div>
+        <div class="item">
+            <img src="story_telling.jpg" alt="Story Telling">
+            <p>Story Telling</p>
+            <p class="price">RM 3.00</p>
+        </div>
+        <div class="item">
+            <img src="chinese_year_competition.jpg" alt="Chinese Year Competition">
+            <p>Chinese Year Competition</p>
+            <p class="price">RM 5.50</p>
+        </div>
+        <div class="item">
+            <img src="christmas_cookies.jpg" alt="Christmas Cookies">
+            <p>Christmas Cookies</p>
+            <p class="price">RM 2.00</p>
+        </div>
+        <div class="item">
+            <img src="cooking_workshop.jpg" alt="Cooking Workshop">
+            <p>Cooking Workshop</p>
+            <p class="price">RM 10.00</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Written World | <a href="web.html">Home</a></p>
+    </footer>
+</body>
+</html>

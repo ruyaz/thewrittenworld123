@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7d5ba;
+            padding: 20px;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        header nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+        }
+
+        h1 {
+            color: #343a40;
+        }
+
+        .notification-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .notification-item {
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .notification-item:last-child {
+            border-bottom: none;
+        }
+
+        .notification-item h3 {
+            margin: 0;
+            color: #e68a49;
+        }
+
+        .notification-item p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .notification-item span {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .notification-item.read {
+            background-color: #f1f1f1;
+            font-style: italic;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="web.html">Home</a>
+            <a href="cart.html">View Cart</a>
+        </nav>
+    </header>
+
+    <h1>Notification Center</h1>
+
+    <div class="notification-container">
+        <div class="notification-item">
+            <h3>New Promotion!</h3>
+            <p>Don't miss our latest sale! Get 20% off on all books until the end of the month.</p>
+            <span>Posted on: 2024-12-13</span>
+        </div>
+
+        <div class="notification-item read">
+            <h3>Order Update</h3>
+            <p>Your order #12345 has been shipped. Expect delivery in 3-5 business days.</p>
+            <span>Posted on: 2024-12-10</span>
+        </div>
+
+        <div class="notification-item">
+            <h3>New Book Arrival</h3>
+            <p>We have a new collection of mystery novels now available in store. Come check them out!</p>
+            <span>Posted on: 2024-12-08</span>
+        </div>
+
+        <div class="notification-item read">
+            <h3>Holiday Hours</h3>
+            <p>Our store will be closed on December 25th for the holiday season. Happy Holidays!</p>
+            <span>Posted on: 2024-12-05</span>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 The Written World</p>
+    </footer>
+
+</body>
+</html>

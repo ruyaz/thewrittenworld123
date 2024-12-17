@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buncho Poster Color</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7d5ba;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #e68a49;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+ header nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Product Container */
+        .product-container {
+            display: flex;
+            max-width: 1000px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-details {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .product-details h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .product-details p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .price {
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .availability {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* Quantity and Buttons */
+        .quantity-section {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .quantity-section input {
+            width: 40px;
+            text-align: center;
+            margin: 0 10px;
+            padding: 5px;
+        }
+
+        button {
+            background-color: #e68a49;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #d17a40;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #e68a49;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #6c63ff;
+        }
+    </style>
+    <script>
+        function addToCart(name, price) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} has been added to your cart!`);
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Buncho Poster Color</h1>
+        <nav>
+            <a href="web.html">Home</a>
+
+        </nav>
+
+    </header>
+
+    <!-- Product Section -->
+    <div class="product-container">
+        <div class="product-image">
+            <img src="buncho_poster.jpg" alt="Buncho Poster Color">
+        </div>
+        <div class="product-details">
+            <h2>Buncho Poster Color (12 Colors)</h2>
+            <p class="price">RM 15.25</p>
+            <p><strong>Product SKU:</strong> BUNCHO-001</p>
+            <p><strong>Brand:</strong> Buncho</p>
+            <p><strong>Size:</strong> 12 x 15ml Tubes</p>
+            <p class="availability">In Stock</p>
+
+            <div class="quantity-section">
+                <label for="quantity">Quantity:</label>
+                <button onclick="updateQuantity(-1)">-</button>
+                <input type="text" id="quantity" value="1">
+                <button onclick="updateQuantity(1)">+</button>
+            </div>
+
+            <button onclick="addToCart('Buncho Poster Color', 15.25)">Add to Cart</button>
+           <button onclick="buyNow()">Buy Now</button>
+            </div>        </div>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Written World | <a href="web.html">Home</a></p>
+    </footer>
+
+    <script>
+        function updateQuantity(change) {
+            const quantityInput = document.getElementById('quantity');
+            let currentQuantity = parseInt(quantityInput.value);
+            if (!isNaN(currentQuantity)) {
+                currentQuantity += change;
+                if (currentQuantity < 1) currentQuantity = 1;
+                quantityInput.value = currentQuantity;
+            }
+        }
+        
+       
+        function buyNow() {
+            alert('Redirecting to payment gateway...');
+            window.location.href = 'payment.html';
+        }
+    </script>
+ 
+</body>
+</html>
